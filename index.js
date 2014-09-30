@@ -19,7 +19,7 @@ exports.template=function(opts){
 
     var src=(opts.fragmentsSrc !== undefined) ? opts.src.concat(opts.fragmentsSrc) : opts.src;
 
-    watch({glob:src},function(files){
+    watch(src,function(files){
         template.compile(opts);
     });
 
@@ -27,7 +27,7 @@ exports.template=function(opts){
 
 exports.scripts=function(opts){
 
-    watch({glob:opts.src},function(files){
+    watch(opts.src,function(files){
         concatScripts(opts);
     });
 
