@@ -25,6 +25,10 @@ exports.template=function(opts){
 
 };
 
+exports.compileTemplates=function(opts){
+    template.compile(opts);
+};
+
 exports.scripts=function(opts){
 
     watch(opts.src,function(files){
