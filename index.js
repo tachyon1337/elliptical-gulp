@@ -9,25 +9,10 @@ var gulp=require('gulp'),
     uglify = require('gulp-uglify'),
     dust = require('dustjs-elliptical'),
     merge = require('merge-stream'),
-    watch=require('gulp-watch'),
-    template=require('elliptical-template-build');
+    watch=require('gulp-watch');
 
 
 
-
-exports.template=function(opts){
-
-    var src=(opts.fragmentsSrc !== undefined) ? opts.src.concat(opts.fragmentsSrc) : opts.src;
-
-    watch(src,function(files){
-        template.compile(opts);
-    });
-
-};
-
-exports.compileTemplates=function(opts){
-    template.compile(opts);
-};
 
 exports.scripts=function(opts){
 
